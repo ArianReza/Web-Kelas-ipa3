@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../img/icon.png">
+    <title>XI IPA 3</title>
+</head>
+
+<body>
+    <header class="shadow-lg header">
+        <nav class="nav bd-grid">
+            <div>
+                <a class="nav__logo">
+                    <img src="../img/logo.png" alt="logo" class="logo">
+                </a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="../galeri/galeri.html" class="nav__link">Galeri</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link active">Foto & Quotes</a></li>
+                    <li class="nav__item"><a href="../anonim/anonim.html" class="nav__link">Pesan Anonim</a></li>    
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle" style="color: #fff;">
+                <i class='bx bx-menu'></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none; ">
+        <symbol id="geo-fill" style="fill: rgba(255, 255, 255, 1);">
+            <path fill-rule="evenodd"
+                d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z">
+            </path>
+        </symbol>
+        <symbol id="calendar3" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z">
+            </path>
+            <path
+                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+            </path>
+        </symbol>
+        <symbol id="galeri" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M20 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.806 5 19s.55-.988 1.012-1H21V3a1 1 0 0 0-1-1zM9.503 5a1.503 1.503 0 1 1 0 3.006 1.503 1.503 0 0 1 0-3.006zM12 13H7l3-3 1.5 1.399L14.5 8l3.5 5h-6z">
+            </path>
+
+        </symbol>
+        <symbol id="quote" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z">
+            </path>
+        </symbol>
+        <symbol id="pesan" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2zm-6 11H7v-2h7v2zm3-4H7V7h10v2z">
+            </path>
+
+        </symbol>
+        <symbol id="chevron-right">
+            <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+            </path>
+        </symbol>
+    </svg>
+
+    <main class="l-main d-block">
+        <section class="home" id="home">
+            <div class="h-image text-center ">
+                <img class="h-img img-fluid" src="../../img/h-img3.jpg" alt="">
+                <div class="posisi d-inline-flex p-2 position-absolute start-50 translate-middle">
+                    <h1 class=" align-self-center home__title fade1  pb-5">
+                        Foto & Quotes <br> 
+                        <span class="home__title-color">XI IPA 3</span>
+                        <br> <span class="smol ">Tahun ajaran 2022-2023</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section class="foto " id="foto">
+            <!--<input type="text" class="border border-primary float-end form-control mt-3 me-3" id="myinput" placeholder="Cari siswa"
+            style="width:20%;">
+            <br>-->
+            <div class="input-group mb-3 mt-3 me-3 float-end search-bar">
+                <span class="border border-primary input-group-text bg-primary" id="basic-addon1"><i class='bx bx-search-alt' style='color:#ffffff'  ></i></span>
+                <input type="text" class="border-primary form-control" id="myinput" placeholder="Cari Siswa" aria-label="Cari Siswa" aria-describedby="basic-addon1">
+              </div>
+              <br>
+            <div class="container mt-5">
+                <h3 class="text-danger mt-5 mb-5 text-center" id="notfound" style="display: none;">Not Found </h3>
+                <div class="justify-content-center" id="miss">
+                        <div
+                            class="profile-card bg-white shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+                            <div class="profile-card_image">
+                                <img src="./img/raisah.jpg" alt="Raisah Shalatun, S.Li" class="mb-4 shadow">
+                            </div>
+                            <div class="profile-card_details">
+                                <p class="card-name fw-bold fs-5 mb-0">Raisah Shalatun, S.Li</p>
+                                <p class="bx bxs-quote-alt-left card-name text-muted mt-4"> If your ship doesn't come in, swim out of it. <i
+                                        class='bx bxs-quote-alt-right'></i></p>
+                            </div>
+                            <div class=" text-center" style="position: absolute; left: 0; bottom: 20px; width: 100%;">
+                                <a href="https://instagram.com/raishalaa" target="_blank" class="d-inline-block p-2">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" target="_blank" class="d-inline-block p-2">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" target="_blank" class="d-inline-block p-2">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <div class="row" id="card">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+            <!-- Left -->
+            <div class="me-5">
+                <span>Follow sosial media kami:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                </a>
+                <a href="https://www.instagram.com/xitigamon/" target="_blank" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@tigamon.3" target="_blank" class="text-white me-4">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3 ">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold"> <img src="../img/logo.png" alt=""
+                                style="  max-width: 100%; height: auto; display: block;"> </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Jelajah</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="../galeri/galeri.html" class="text-white">Galeri</a>
+                        </p>
+                        <p>
+                            <a href="#top" class="text-white">Quotes Siswa</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Jadwal</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="../#pelajaran" class="text-white">Jadwal Pelajaran</a>
+                        </p>
+                        <p>
+                            <a href="../#piket" class="text-white">Jadwal Piket Siswa</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Kontak kami</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        
+                        <p>
+                            <a href="../anonim/anonim.html" class="text-white">Kirim pesan Anonim</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2022 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">PT. Ariancorp </a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/311bc0e634.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
