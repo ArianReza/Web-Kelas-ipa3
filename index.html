@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./img/icon.png">
+    <title>XI IPA 3</title>
+</head>
+
+<body>
+    <header class="shadow-lg header">
+        <nav class="nav bd-grid">
+            <div>
+                <a class="nav__logo">
+                    <img src="./img/logo.png" alt="logo" class="logo">
+                </a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link n-active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item dropdown">
+                        <a href="#jadwal" class="nav__link">Jadwal</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>
+                                    <i class='bx bxs-chevron-right'></i>
+                                    <a class="menu_item" href="#pelajaran">Pelajaran</a>
+                                </li>
+                                <br>
+                                <li>
+                                    <i class='bx bxs-chevron-right'></i>
+                                    <a class="menu_item" href="#piket">Piket</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a href="#galeris" class="nav__link">Galeri</a></li>
+
+                    <li class="nav__item"><a href="./anonim/anonim.html" class="nav__link">Pesan Anonim</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu' style="color: #fff;"></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none; ">
+        <symbol id="geo-fill" style="fill: rgba(255, 255, 255, 1);">
+            <path fill-rule="evenodd"
+                d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z">
+            </path>
+        </symbol>
+        <symbol id="calendar3" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z">
+            </path>
+            <path
+                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+            </path>
+        </symbol>
+        <symbol id="galeri" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M20 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.806 5 19s.55-.988 1.012-1H21V3a1 1 0 0 0-1-1zM9.503 5a1.503 1.503 0 1 1 0 3.006 1.503 1.503 0 0 1 0-3.006zM12 13H7l3-3 1.5 1.399L14.5 8l3.5 5h-6z">
+            </path>
+
+        </symbol>
+        <symbol id="quote" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z">
+            </path>
+        </symbol>
+        <symbol id="pesan" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2zm-6 11H7v-2h7v2zm3-4H7V7h10v2z">
+            </path>
+
+        </symbol>
+        <symbol id="chevron-right">
+            <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+            </path>
+        </symbol>
+        <symbol id="gambarf" style="fill: rgba(255, 255, 255, 1);">
+
+            <path
+                d="M20 2H8c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM8 16V4h12l.002 12H8z">
+            </path>
+            <path d="M4 8H2v12c0 1.103.897 2 2 2h12v-2H4V8z"></path>
+            <path d="m12 12-1-1-2 3h10l-4-6z"></path>
+        </symbol>
+    </svg>
+
+    <main class="l-main d-block">
+        <section class="home" id="home">
+            <div class="h-image text-center d-sm-block d-md-none d-lg-none d-sm-block">
+                <img class="h-img img-fluid" src="./img/h-img.jpeg" alt="">
+                <div class="posisi d-inline-flex p-2 position-absolute start-50 translate-middle">
+                    <h1 class="align-self-center home__title fade1  pb-5">Selamat datang di website<br>
+                        <span class="home__title-color">XI IPA 3</span>
+                        <br> <span class="smol">Tahun ajaran 2022-2023</span>
+                    </h1>
+                </div>
+            </div>
+            <div id="carouselExampleFade" class="d-none d-md-block carousel slide carousel-fade"
+                data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/h-img.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                            <h1 class="align-self-center home__title fade1  pb-5">Selamat datang di website<br>
+                                <span class="home__title-color">XI IPA 3</span>
+                                <br> <span class="smol">Tahun ajaran 2022-2023</span>
+                            </h1>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/h-img5.jpeg" class="d-block w-100" alt="...">
+                        <div class="text-start carousel-caption d-none d-md-block">
+                            <h1 class=" align-self-center capt pb-2 mb-5">Jelajahi Galeri Kami
+                                <br>
+                                <span class="smol">Kalian bisa menjelajahi kumpulan foto foto keseharian kami di bawah
+                                    ini</span>
+                                <br>
+                                <a href="./galeri/galeri.html"
+                                    class="btn btn-primary active rounded-pill smol mb-2 pe-3 ps-4">
+                                    Jelajahi
+                                    <svg class="ps-1 bi" width="2em" height="1.5em">
+                                        <use xlink:href="#gambarf"></use>
+                                    </svg>
+                                </a>
+                            </h1>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/h-img6.jpg" class="d-block w-100" alt="...">
+                        <div class="text-start  carousel-caption d-none d-md-block">
+                            <h1 class=" align-self-center capt pb-2 mb-5">Foto & Quotes
+                                <br>
+                                <span class="smol">Kalian bisa menjelajahi kumpulan foto & Quotes dari kami dibawah
+                                    ini</span>
+                                <br>
+                                <a href="./quote/index.html"
+                                    class="btn btn-primary active rounded-pill smol mb-2 pe-3 ps-4">
+                                    Jelajahi
+                                    <svg class="ps-1 bi" width="2em" height="1.5em">
+                                        <use xlink:href="#gambarf"></use>
+                                    </svg>
+                                </a>
+                            </h1>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container px-4 py-5">
+                <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                    <div class="d-flex flex-column align-items-start gap-2">
+                        <h3 class="fw-bold fade1">Tentang Kami</h3>
+                        <p class="text-muted fade2">xitigamon kelas terwangi,tercool 17°,ikan hiu makan bebek ga tigamon
+                            kalau ga cere bebek😎
+                            , di samping ini kalian dapat melihat lebih lanjut tentang kelas kami.</p>
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+                        <div class="d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#galeri"></use>
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 fade1">Galeri Siswa</h4>
+                            <p class="text-muted fade2">Kumpulan foto foto keseharian ataupun event yang kami ikuti</p>
+                            <a href="./galeri/galeri.html"
+                                class="fade3 icon-link d-inline-flex align-items-center fade3">
+                                Lihat galeri
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#quote"></use>
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 fade1">Foto dan Quotes</h4>
+                            <p class="text-muted fade2">Kumpulan foto dan quotes dari kami.</p>
+                            <a href="/quote/" class="fade3 icon-link d-inline-flex align-items-center">
+                                Lihat Foto dan Quotes
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#pesan"></use>
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 fade1">Pesan anonim</h4>
+                            <p class="text-muted fade2">Kalian dapat mengirim pesan anonim ke salah satu dari kami.</p>
+                            <a href="./anonim/anonim.html" class="fade3 icon-link d-inline-flex align-items-center">
+                                Kirim Pesan
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="jadwal" id="jadwal">
+            <div class="pelajaran container text-center" id="pelajaran">
+                <h2 class="fw-bold mb-4 fade1">Jadwal Pelajaran</h2>
+                <div class="fade2 table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th scope="col">Jam</th>
+                                <th scope="col">Senin</th>
+                                <th scope="col">Selasa</th>
+                                <th scope="col">Rabu</th>
+                                <th scope="col">Kamis</th>
+                                <th scope="col">Jumat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>07:00 - 07:40</td>
+                                <td>Pembinaan</td>
+                                <td>B. Indo</td>
+                                <td>BPBK</td>
+                                <td>Kimia</td>
+                                <td>Seni Budaya</td>
+                            </tr>
+                            <tr>
+                                <td>07:40 - 08:20</td>
+                                <td>Biologi</td>
+                                <td>B. Indo</td>
+                                <td>B. Inggris</td>
+                                <td>Kimia</td>
+                                <td>Sejarah</td>
+                            </tr>
+                            <tr>
+                                <td>08:20 - 09:00</td>
+                                <td>Biologi</td>
+                                <td>Matematika</td>
+                                <td>B. Inggris</td>
+                                <td>English Club</td>
+                                <td>PKWU</td>
+                            </tr>
+                            <tr>
+                                <td>09:00 - 09:40</td>
+                                <td>Tahfidz</td>
+                                <td>Matematika</td>
+                                <td>B. Inggris</td>
+                                <td>English Club</td>
+                                <td>Istirahat</td>
+                            </tr>
+                            <tr>
+                                <td>10:15 - 10:55</td>
+                                <td>Tahfidz</td>
+                                <td>PJOK</td>
+                                <td>Fisika</td>
+                                <td>B. Indo</td>
+                                <td>Biologi</td>
+                            </tr>
+                            <tr>
+                                <td>10:55 - 11:40</td>
+                                <td>Matematika</td>
+                                <td>PJOK</td>
+                                <td>Fisika</td>
+                                <td>B. Indo</td>
+                                <td>Biologi</td>
+                            </tr>
+                            <tr>
+                                <td>12:30 - 13:00</td>
+                                <td>Matematika</td>
+                                <td>PJOK</td>
+                                <td>Matematika</td>
+                                <td>Fisika</td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td>13:00 - 13:40</td>
+                                <td>PAI</td>
+                                <td>B. Sunda</td>
+                                <td>Matematika</td>
+                                <td>Fisika</td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td>13:40 - 14:20</td>
+                                <td>PAI</td>
+                                <td>PKN</td>
+                                <td>Kimia</td>
+                                <td>Matematika</td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td>15:15 - 15:30</td>
+                                <td>PAI</td>
+                                <td>PKN</td>
+                                <td>Kimia</td>
+                                <td>Matematika</td>
+                                <td> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="text-muted text-sm-start">Last Update 1/11/2022.</p>
+                </div>
+
+            </div>
+            <div class="piket container text-center" id="piket">
+                <h2 class="fw-bold mb-4 fade1">Jadwal Piket</h2>
+                <div class=" fade2 table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th scope="col">Senin</th>
+                                <th scope="col">Selasa</th>
+                                <th scope="col">Rabu</th>
+                                <th scope="col">Kamis</th>
+                                <th scope="col">Jumat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Imtiyaz</td>
+                                <td>Azhar</td>
+                                <td>Naufal K</td>
+                                <td>Nadia Z</td>
+                                <td>Givari</td>
+                            </tr>
+                            <tr>
+                                <td>Kalisa</td>
+                                <td>Banna</td>
+                                <td>Arian</td>
+                                <td>Kawai</td>
+                                <td>Haifa</td>
+                            </tr>
+                            <tr>
+                                <td>Raihan</td>
+                                <td>Yovana</td>
+                                <td>Dzakir</td>
+                                <td>Divo</td>
+                                <td>Faza</td>
+                            </tr>
+                            <tr>
+                                <td>Nadia S</td>
+                                <td>Farrel M</td>
+                                <td>Qonita</td>
+                                <td>Farrel D</td>
+                                <td>Lukman</td>
+                            </tr>
+                            <tr>
+                                <td>Aqila</td>
+                                <td>Dini</td>
+                                <td>Muthia</td>
+                                <td>Aziz</td>
+                                <td>Shabir</td>
+                            </tr>
+                            <tr>
+                                <td>Awva</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="text-muted text-sm-start">Last Update 1/11/2022.</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="galeri" id="galeris">
+            <div class="container px-4 py-5" id="custom-cards">
+                <h2 class="text-center galeri fw-bold fade1">Galeri</h2>
+                <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">
+                    <div class="col">
+                        <a href="./galeri/tahura/tahura.html"
+                            class="galeri_link card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+                            <div class="position-relative">
+                                <img src="./img/tahura/th-bers.jpeg" alt="Tahura" style="width:100%; height:auto;">
+
+                                <div class="position-absolute" style="bottom: 20px; left: 20px;">
+                                    <svg class="bi me-2" width="1em" height="1em">
+                                        <use xlink:href="#geo-fill"></use>
+                                    </svg>
+                                    <small class="fw-bold">Tahura</small>
+                                </div>
+                                <div class="position-absolute" style="bottom: 20px; right: 20px;">
+                                    <svg class="bi me-2" width="1em" height="1em">
+                                        <use xlink:href="#calendar3"></use>
+                                    </svg>
+                                    <small class="fw-bold">30/10/2022</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="./galeri/pusdiku/pusdiku.html"
+                            class="galeri_link card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+                            <div class="position-relative">
+                                <img src="./img/mrs/mrs-bers.jpeg" alt="Tahura" style="width:100%; height:auto;">
+
+                                <div class="position-absolute" style="bottom: 20px; left: 20px;">
+                                    <svg class="bi me-2" width="1em" height="1em">
+                                        <use xlink:href="#geo-fill"></use>
+                                    </svg>
+                                    <small class="fw-bold">Pusdiku</small>
+                                </div>
+                                <div class="position-absolute" style="bottom: 20px; right: 20px;">
+                                    <svg class="bi me-2" width="1em" height="1em">
+                                        <use xlink:href="#calendar3"></use>
+                                    </svg>
+                                    <small class="fw-bold">12/8/2022</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+            <!-- Left -->
+            <div class="me-5">
+                <span>Follow sosial media kami:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                </a>
+                <a href="https://www.instagram.com/xitigamon/" target="_blank" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@tigamon.3" target="_blank" class="text-white me-4">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3 ">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold"> <img src="./img/logo.png" alt=""
+                                style=" max-width: 100%; height: auto; display: block;"> </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Jelajah</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="./galeri/galeri.html" class="text-white">Galeri</a>
+                        </p>
+                        <p>
+                            <a href="./quote/index.html" class="text-white">Quotes Siswa</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Jadwal</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#pelajaran" class="text-white">Jadwal Pelajaran</a>
+                        </p>
+                        <p>
+                            <a href="#piket" class="text-white">Jadwal Piket Siswa</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Kontak kami</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="./anonim/anonim.html" class="text-white">Kirim pesan Anonim</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2022 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">PT. Ariancorp </a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/311bc0e634.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
