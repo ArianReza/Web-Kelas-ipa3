@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../img/icon.png">
+    <title>XI IPA 3</title>
+</head>
+
+<body>
+    <header class="shadow-lg header">
+        <nav class="nav bd-grid">
+            <div>
+                <a class="nav__logo">
+                    <img src="../../img/logo.png" alt="logo" class="logo">
+                </a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="../galeri/galeri.html" class="nav__link">Galeri</a></li>
+                    <li class="nav__item"><a href="../quote/index.html" class="nav__link">Foto & Quotes</a></li>
+                    <li class="nav__item"><a href="#hpesan" class="nav__link active1">Pesan Anonim</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+        </nav>
+    </header>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none; ">
+        <symbol id="geo-fill" style="fill: rgba(255, 255, 255, 1);">
+            <path fill-rule="evenodd"
+                d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z">
+            </path>
+        </symbol>
+        <symbol id="calendar3" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z">
+            </path>
+            <path
+                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+            </path>
+        </symbol>
+        <symbol id="galeri" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M20 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.806 5 19s.55-.988 1.012-1H21V3a1 1 0 0 0-1-1zM9.503 5a1.503 1.503 0 1 1 0 3.006 1.503 1.503 0 0 1 0-3.006zM12 13H7l3-3 1.5 1.399L14.5 8l3.5 5h-6z">
+            </path>
+
+        </symbol>
+        <symbol id="quote" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z">
+            </path>
+        </symbol>
+        <symbol id="pesan" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M20 2H4c-1.103 0-2 .894-2 1.992v12.016C2 17.106 2.897 18 4 18h3v4l6.351-4H20c1.103 0 2-.894 2-1.992V3.992A1.998 1.998 0 0 0 20 2zm-6 11H7v-2h7v2zm3-4H7V7h10v2z">
+            </path>
+
+        </symbol>
+        <symbol id="chevron-right">
+            <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+            </path>
+        </symbol>
+        <symbol id="addpesan" style="fill: rgba(255, 255, 255, 1);">
+            <path d="M11 14h2v-3h3V9h-3V6h-2v3H8v2h3z"></path>
+            <path
+                d="M20 2H4c-1.103 0-2 .897-2 2v18l5.333-4H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14H6.667L4 18V4h16v12z">
+            </path>
+        </symbol>
+        <symbol  id="bot" style="fill: rgba(10, 88, 202, 1);">
+                <path
+                    d="M21.928 11.607c-.202-.488-.635-.605-.928-.633V8c0-1.103-.897-2-2-2h-6V4.61c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5c-1.103 0-2 .897-2 2v2.997l-.082.006A1 1 0 0 0 1.99 12v2a1 1 0 0 0 1 1H3v5c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5a1 1 0 0 0 1-1v-1.938a1.006 1.006 0 0 0-.072-.455zM5 20V8h14l.001 3.996L19 12v2l.001.005.001 5.995H5z">
+                </path>
+                <ellipse cx="8.5" cy="12" rx="1.5" ry="2"></ellipse>
+                <ellipse cx="15.5" cy="12" rx="1.5" ry="2"></ellipse>
+                <path d="M8 16h8v2H8z"></path>
+        </symbol>
+    </svg>
+
+    <main class="l-main d-block">
+        <section class="home" id="home">
+            <div class="h-image">
+                <img class="h-img img-fluid" src="../../img/h-img2.jpeg" alt="">
+                <h1 class="home__title home_fade">Share Us Your<br>
+                    <span class="home__title-color home_fade">Thought!</span>
+                    <br> <span class="smol">Kirim pesan dan kesan</span>
+                </h1>
+            </div>
+        </section>
+        <section class="addpesan" id="hpesan">
+            <header class="m-3 p-2 rounded-pill bg-white">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                            <li><a href="#" class="nav-link px-2 me-4 text-muted">Semua Pesan</a></li>
+                            <li><a href="#" class="nav-link px-2 me-4 ">Tanpa Nama</a></li>
+                            <li><a href="#" class="nav-link px-2 ">Dengan Nama</a></li>
+                        </ul>
+                        <div class="text-end  nav-pills">
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" id="add-pesan" type="button"
+                                class="btn btn-primary active rounded-pill pe-3 ps-3" data-bs-toggle="button"
+                                aria-pressed="true"> Tambah Pesan
+                                <svg class="bi" width="1.5em" height="1.5em">
+                                    <use xlink:href="#addpesan"></use>
+                                </svg>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <form id="formP">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Login Form</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="nama-pesan" class="col-form-label">Nama :</label>
+                                    <input type="text" class="form-control" id="nama-pesan">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Pesan :</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                <button type="submit" id="Tpesan" data-bs-dismiss="modal" class="btn btn-primary">Tambah
+                                    Pesan</button>
+                            </div>
+                        </form>
+                        <!--     // end -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <svg class="bi me-2" width="1.5em" height="1.5em">
+                        <use xlink:href="#bot"></use>
+                    </svg>
+                    <strong class="mt-2 me-auto">Sistem</strong>
+                    <small></small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Sukses mengunggah pesan ke database!
+                </div>
+            </div>
+        </div>
+
+
+        <section class="board" id="board">
+            <div class="container mb-5">
+                <div class="row gy-3" id="boardie">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+            <!-- Left -->
+            <div class="me-5">
+                <span>Follow sosial media kami :</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                </a>
+                <a href="https://www.instagram.com/xitigamon/" target="_blank" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@tigamon.3" target="_blank" class="text-white me-4">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.youtube.com/c/YtDzakir" target="_blank" class="text-white me-4">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3 ">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold"> <img src="../img/logo.png" alt=""
+                                style="  max-width: 100%; height: auto; display: block;"> </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Jelajah</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="../galeri.html" class="text-white">Galeri</a>
+                        </p>
+                        <p>
+                            <a href="../../quote/index.html" class="text-white">Quotes Siswa</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Jadwal</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="../../#pelajaran" class="text-white">Jadwal Pelajaran</a>
+                        </p>
+                        <p>
+                            <a href="../../#quote" class="text-white">Jadwal Piket Siswa</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Kontak kami</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-white">Saran dan masukan</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Kirim pesan RAHASIA</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2022 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">PT. Ariancorp </a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/311bc0e634.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+        </script>
+    <script src="./main.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">  </script>
+   
+
+
+</body>
+
+</html>
